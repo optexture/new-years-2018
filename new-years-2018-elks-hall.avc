@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Composition name="Composition" uniqueId="1512278923106" numDecks="3" currentDeckIndex="0" numLayers="5" numColumns="19" compositionIsRelative="0">
+<Composition name="Composition" uniqueId="1512278923106" numDecks="3" currentDeckIndex="0" numLayers="6" numColumns="19" compositionIsRelative="0">
 	<versionInfo name="Resolume Arena" majorVersion="6" minorVersion="0" microVersion="3" revision="60620"/>
 	<CompositionInfo name="new-years-2018-elks-hall" description="" width="1920" height="1080">
 		<DeckInfo name="new-years-2018" id="1513749526471" closed="0"/>
@@ -81,10 +81,8 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Group>
-	<Layer uniqueId="1513834674113" layerIndex="0" layerGroup="0">
-		<Params name="Params">
-			<Param name="Name" default="Layer #" value="Special Layer"/>
-		</Params>
+	<Layer uniqueId="1513925605669" layerIndex="0" layerGroup="0">
+		<Params name="Params"/>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
 			<FoldParams name="FoldParams"/>
@@ -113,7 +111,40 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Layer uniqueId="1513834674189" layerIndex="1">
+	<Layer uniqueId="1513834674113" layerIndex="1">
+		<Params name="Params">
+			<Param name="Name" default="Layer #" value="Special Layer"/>
+		</Params>
+		<ClipTransition name="ClipTransition"/>
+		<LayerView name="LayerView">
+			<FoldParams name="FoldParams"/>
+		</LayerView>
+		<AudioTrack name="AudioTrack">
+			<AudioEffectChain name="AudioEffectChain"/>
+		</AudioTrack>
+		<VideoTrack name="VideoTrack">
+			<Params name="Params">
+				<ParamRange name="Opacity" default="0.5" value="1"/>
+				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
+				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+			</Params>
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
+				<RenderPass storage="0" name="Transform" type="Transform" uniqueId="17122039101699797593" baseType="Effect" index="0">
+					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
+				</RenderPass>
+			</RenderPass>
+			<ChoosableMixer name="Blend">
+				<Params name="Params">
+					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464114" storeChoices="0"/>
+				</Params>
+				<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
+			</ChoosableMixer>
+			<ChoosableMixer name="Transition">
+				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
+			</ChoosableMixer>
+		</VideoTrack>
+	</Layer>
+	<Layer uniqueId="1513834674189" layerIndex="2">
 		<Params name="Params"/>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
@@ -154,7 +185,7 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Layer uniqueId="1513749526533" layerIndex="2" layerGroup="1">
+	<Layer uniqueId="1513749526533" layerIndex="3" layerGroup="1">
 		<Params name="Params"/>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
@@ -185,7 +216,7 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Layer uniqueId="1513749526583" layerIndex="3" layerGroup="1">
+	<Layer uniqueId="1513749526583" layerIndex="4" layerGroup="1">
 		<Params name="Params">
 			<ParamChoice name="Mask Mode" default="0" value="1" storeChoices="0"/>
 		</Params>
@@ -218,7 +249,7 @@
 			</ChoosableMixer>
 		</VideoTrack>
 	</Layer>
-	<Layer uniqueId="1513749526535" layerIndex="4">
+	<Layer uniqueId="1513749526535" layerIndex="5">
 		<Params name="Params"/>
 		<ClipTransition name="ClipTransition"/>
 		<LayerView name="LayerView">
@@ -242,7 +273,11 @@
 				<Params name="Params">
 					<ParamChoice storage="3" name="Blend Mode" default="67464114" value="67464213" storeChoices="0"/>
 				</Params>
-				<RenderPass name="Multiply" type="Multiply" uniqueId="A013" baseType="Mixer"/>
+				<RenderPass name="Multiply" type="Multiply" uniqueId="A013" baseType="Mixer">
+					<Params name="Params">
+						<ParamRange name="Opacity" default="1" value="0.48936170339584350586"/>
+					</Params>
+				</RenderPass>
 			</ChoosableMixer>
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
@@ -298,7 +333,7 @@
 	</CrossFader>
 	<TempoController name="TempoController"/>
 	<PersistentClips>
-		<PersistentClip layerIndex="4" columnIndex="0">
+		<PersistentClip layerIndex="5" columnIndex="0">
 			<Clip name="Clip" uniqueId="1513831346782">
 				<PreloadData>
 					<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-full.png"/>
@@ -312,7 +347,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="851.58680398401293132">
+						<ParamRange name="Position" default="0" value="400.11281546857537705">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -366,11 +401,11 @@
 			</Clip>
 		</PersistentClip>
 	</PersistentClips>
-	<Deck name="Deck" uniqueId="1513749526471" closed="0" numLayers="5" numColumns="19" deckIndex="0">
+	<Deck name="Deck" uniqueId="1513749526471" closed="0" numLayers="6" numColumns="19" deckIndex="0">
 		<Params name="Params">
 			<Param name="Name" default="empty" value="new-years-2018"/>
 		</Params>
-		<Clip name="Clip" uniqueId="1513834674115" layerIndex="0" columnIndex="0">
+		<Clip name="Clip" uniqueId="1513834674115" layerIndex="1" columnIndex="0">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-03-15-8_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -380,7 +415,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="15.020022112534206826">
+					<ParamRange name="Position" default="0" value="23557.318537808125257">
 						<ValueRange name="minMax" min="0" max="38366.666666666664241"/>
 						<ValueRange name="startStop" min="0" max="38366.666666666664241"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -403,13 +438,7 @@
 				</Params>
 			</Transport>
 			<ClipView name="ClipView">
-				<FoldParams name="FoldParams">
-					<FoldState component="/clipproperties/cuepoints/" folded="1"/>
-					<FoldState component="/clipproperties/transport/" folded="0"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/" folded="0"/>
-					<FoldState component="/groupedcomponent/videotrackinfocomponent/tracksettingscomponent/videosettingscomponent/" folded="0"/>
-				</FoldParams>
+				<FoldParams name="FoldParams"/>
 			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
@@ -434,7 +463,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513749526507" layerIndex="3" columnIndex="0">
+		<Clip name="Clip" uniqueId="1513749526507" layerIndex="4" columnIndex="0">
 			<Params name="Params">
 				<Param storage="3" name="Name" default="TDNYE_panel_mask" value="TDNYE_panel_mask"/>
 				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
@@ -492,7 +521,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674117" layerIndex="0" columnIndex="1">
+		<Clip name="Clip" uniqueId="1513834674117" layerIndex="1" columnIndex="1">
 			<Params name="Params">
 				<Param storage="3" name="Name" default="" value="Clip 2"/>
 				<ParamChoice name="Ignore Column Trigger" default="0" value="1" storeChoices="0"/>
@@ -524,7 +553,7 @@
 				<FoldParams name="FoldParams"/>
 			</ClipView>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674200" layerIndex="1" columnIndex="1">
+		<Clip name="Clip" uniqueId="1513834674200" layerIndex="2" columnIndex="1">
 			<Params name="Params">
 				<Param storage="3" name="Name" default="" value="Clip 3"/>
 				<ParamChoice name="Ignore Column Trigger" default="0" value="1" storeChoices="0"/>
@@ -556,7 +585,7 @@
 				<FoldParams name="FoldParams"/>
 			</ClipView>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834673951" layerIndex="2" columnIndex="1">
+		<Clip name="Clip" uniqueId="1513834673951" layerIndex="3" columnIndex="1">
 			<Params name="Params">
 				<Param storage="3" name="Name" default="TDNYE_textured_panels" value="TDNYE_textured_panels"/>
 				<ParamChoice storage="3" name="TransportType" default="0" value="0" storeChoices="0"/>
@@ -614,7 +643,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346811" layerIndex="3" columnIndex="1">
+		<Clip name="Clip" uniqueId="1513831346811" layerIndex="4" columnIndex="1">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-full.png"/>
 			</PreloadData>
@@ -676,7 +705,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834673999" layerIndex="4" columnIndex="1">
+		<Clip name="Clip" uniqueId="1513834673999" layerIndex="5" columnIndex="1">
 			<Params name="Params">
 				<Param storage="3" name="Name" default="" value="Clip 1"/>
 				<ParamChoice name="Ignore Column Trigger" default="0" value="1" storeChoices="0"/>
@@ -708,7 +737,7 @@
 				<FoldParams name="FoldParams"/>
 			</ClipView>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346649" layerIndex="3" columnIndex="2">
+		<Clip name="Clip" uniqueId="1513831346649" layerIndex="4" columnIndex="2">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-all-columns.png"/>
 			</PreloadData>
@@ -770,9 +799,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674121" layerIndex="0" columnIndex="3">
+		<Clip name="Clip" uniqueId="1513834674121" layerIndex="1" columnIndex="3">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-3-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-3-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -781,7 +809,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="19229.442159414385969">
+					<ParamRange name="Position" default="0" value="17.019453939225059003">
 						<ValueRange name="minMax" min="0" max="39133.333333333335759"/>
 						<ValueRange name="startStop" min="0" max="39133.333333333335759"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -806,18 +834,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-3-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -841,7 +857,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674193" layerIndex="1" columnIndex="3">
+		<Clip name="Clip" uniqueId="1513834674193" layerIndex="2" columnIndex="3">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-06-25_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -851,7 +867,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1125.8585868633742848">
+					<ParamRange name="Position" default="0" value="1084.0285069709063919">
 						<ValueRange name="minMax" min="0" max="58533.333333333335759"/>
 						<ValueRange name="startStop" min="0" max="58533.333333333335759"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -899,7 +915,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346651" layerIndex="3" columnIndex="3">
+		<Clip name="Clip" uniqueId="1513831346651" layerIndex="4" columnIndex="3">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-all-panels.png"/>
 			</PreloadData>
@@ -909,7 +925,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="572.93552227333145765">
+					<ParamRange name="Position" default="0" value="832.20834816912918086">
 						<ValueRange name="minMax" min="0" max="1000"/>
 						<ValueRange name="startStop" min="0" max="1000"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -961,9 +977,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674123" layerIndex="0" columnIndex="4">
+		<Clip name="Clip" uniqueId="1513834674123" layerIndex="1" columnIndex="4">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-6-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-6-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -972,7 +987,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="43799.816510780576209">
+					<ParamRange name="Position" default="0" value="48882.465035543020349">
 						<ValueRange name="minMax" min="0" max="48900"/>
 						<ValueRange name="startStop" min="0" max="48900"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -997,18 +1012,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-6-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1042,7 +1045,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674194" layerIndex="1" columnIndex="4">
+		<Clip name="Clip" uniqueId="1513834674194" layerIndex="2" columnIndex="4">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-06-34_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -1052,7 +1055,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1800.3341748657257995">
+					<ParamRange name="Position" default="0" value="750.06955881131591468">
 						<ValueRange name="minMax" min="0" max="12533.33333333333394"/>
 						<ValueRange name="startStop" min="0" max="12533.33333333333394"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1100,7 +1103,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346633" layerIndex="2" columnIndex="4">
+		<Clip name="Clip" uniqueId="1513831346633" layerIndex="3" columnIndex="4">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\etc\Wall Mask Cut out ALL.mov"/>
 			</PreloadData>
@@ -1110,7 +1113,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="632.08815990528091788">
+					<ParamRange name="Position" default="0" value="2195.3705868188994828">
 						<ValueRange name="minMax" min="0" max="30397.033333333332848"/>
 						<ValueRange name="startStop" min="0" max="30397.033333333332848"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1158,9 +1161,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674125" layerIndex="0" columnIndex="5">
+		<Clip name="Clip" uniqueId="1513834674125" layerIndex="1" columnIndex="5">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-12-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-12-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1169,7 +1171,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1440.5556899145656189">
+					<ParamRange name="Position" default="0" value="25554.152267929803202">
 						<ValueRange name="minMax" min="0" max="27333.333333333332121"/>
 						<ValueRange name="startStop" min="0" max="26319.138278636328323"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1192,23 +1194,8 @@
 				</Params>
 			</Transport>
 			<ClipView name="ClipView">
-				<FoldParams name="FoldParams">
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/huerotate/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/huerotate/mixerparamscomponent/" folded="0"/>
-				</FoldParams>
+				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-12-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1242,9 +1229,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674195" layerIndex="1" columnIndex="5">
+		<Clip name="Clip" uniqueId="1513834674195" layerIndex="2" columnIndex="5">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-06-35_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-06-35_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1253,7 +1239,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="2639.9999999955280146">
+					<ParamRange name="Position" default="0" value="17.009213945944793522">
 						<ValueRange name="minMax" min="0" max="41066.666666666664241"/>
 						<ValueRange name="startStop" min="0" max="41066.666666666664241"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1278,18 +1264,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-06-06-35_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1313,7 +1287,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346770" layerIndex="3" columnIndex="5">
+		<Clip name="Clip" uniqueId="1513831346770" layerIndex="4" columnIndex="5">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-side-panels-only.png"/>
 			</PreloadData>
@@ -1375,9 +1349,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674127" layerIndex="0" columnIndex="6">
+		<Clip name="Clip" uniqueId="1513834674127" layerIndex="1" columnIndex="6">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-23-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-23-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1386,7 +1359,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
+					<ParamRange name="Position" default="0" value="1500.4501208467409015">
 						<ValueRange name="minMax" min="0" max="27366.666666666667879"/>
 						<ValueRange name="startStop" min="0" max="27366.666666666667879"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1411,18 +1384,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-23-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1446,7 +1407,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513919220159" layerIndex="1" columnIndex="6">
+		<Clip name="Clip" uniqueId="1513919220159" layerIndex="2" columnIndex="6">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-17-1_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -1456,7 +1417,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="8466.2769227708467952">
+					<ParamRange name="Position" default="0" value="95315.214172382053221">
 						<ValueRange name="minMax" min="0" max="385300"/>
 						<ValueRange name="startStop" min="0" max="385300"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1508,7 +1469,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834673937" layerIndex="2" columnIndex="6">
+		<Clip name="Clip" uniqueId="1513834673937" layerIndex="3" columnIndex="6">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-08-62_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -1518,7 +1479,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="28067.340828813321423">
+					<ParamRange name="Position" default="0" value="10316.422628123242248">
 						<ValueRange name="minMax" min="0" max="57966.666666666664241"/>
 						<ValueRange name="startStop" min="0" max="57966.666666666664241"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1543,8 +1504,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams">
 					<FoldState component="/clipproperties/transport/" folded="1"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/huerotate/" folded="0"/>
-					<FoldState component="/groupedcomponent/renderpasschaincomponent/huerotate/mixerparamscomponent/" folded="0"/>
 				</FoldParams>
 			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
@@ -1580,7 +1539,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346659" layerIndex="3" columnIndex="6">
+		<Clip name="Clip" uniqueId="1513831346659" layerIndex="4" columnIndex="6">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-center-panel-no-rings.png"/>
 			</PreloadData>
@@ -1642,9 +1601,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674129" layerIndex="0" columnIndex="7">
+		<Clip name="Clip" uniqueId="1513834674129" layerIndex="1" columnIndex="7">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-28-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-28-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1653,7 +1611,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
+					<ParamRange name="Position" default="0" value="15798.793944890547209">
 						<ValueRange name="minMax" min="0" max="45200"/>
 						<ValueRange name="startStop" min="0" max="45200"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1678,18 +1636,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-28-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1713,7 +1659,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834673939" layerIndex="2" columnIndex="7">
+		<Clip name="Clip" uniqueId="1513834673939" layerIndex="3" columnIndex="7">
 			<PreloadData>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-17-1_DXV3-1920x1080.mov"/>
 			</PreloadData>
@@ -1723,7 +1669,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="196634.21866364538437">
+					<ParamRange name="Position" default="0" value="1516.9242220018645639">
 						<ValueRange name="minMax" min="0" max="385300"/>
 						<ValueRange name="startStop" min="0" max="385300"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1771,9 +1717,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674131" layerIndex="0" columnIndex="8">
+		<Clip name="Clip" uniqueId="1513834674131" layerIndex="1" columnIndex="8">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-30-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-30-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1782,7 +1727,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
+					<ParamRange name="Position" default="0" value="2116.194081225433365">
 						<ValueRange name="minMax" min="0" max="4833.3333333333330302"/>
 						<ValueRange name="startStop" min="0" max="4833.3333333333330302"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1807,18 +1752,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-30-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1842,9 +1775,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834673941" layerIndex="2" columnIndex="8">
+		<Clip name="Clip" uniqueId="1513834673941" layerIndex="3" columnIndex="8">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-20-58_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-20-58_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1853,7 +1785,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
+					<ParamRange name="Position" default="0" value="17.039641354465857148">
 						<ValueRange name="minMax" min="0" max="128100"/>
 						<ValueRange name="startStop" min="0" max="128100"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1878,18 +1810,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-06-20-58_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1913,9 +1833,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674133" layerIndex="0" columnIndex="9">
+		<Clip name="Clip" uniqueId="1513834674133" layerIndex="1" columnIndex="9">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1924,7 +1843,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
+					<ParamRange name="Position" default="0" value="16.520327410660684109">
 						<ValueRange name="minMax" min="0" max="47500"/>
 						<ValueRange name="startStop" min="0" max="47500"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1949,18 +1868,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-17-40-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -1984,9 +1891,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834673943" layerIndex="2" columnIndex="9">
+		<Clip name="Clip" uniqueId="1513834673943" layerIndex="3" columnIndex="9">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-20-81_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-20-81_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -1995,7 +1901,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
+					<ParamRange name="Position" default="0" value="16.537881684780586511">
 						<ValueRange name="minMax" min="0" max="32033.333333333332121"/>
 						<ValueRange name="startStop" min="0" max="32033.333333333332121"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -2020,18 +1926,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-06-20-81_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -2055,9 +1949,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674135" layerIndex="0" columnIndex="10">
+		<Clip name="Clip" uniqueId="1513834674135" layerIndex="1" columnIndex="10">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -2066,7 +1959,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="0">
+					<ParamRange name="Position" default="0" value="9926.240889697235616">
 						<ValueRange name="minMax" min="0" max="20900"/>
 						<ValueRange name="startStop" min="0" max="20900"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -2077,7 +1970,7 @@
 									<ParamRange storage="3" name="Speed" default="1" value="1"/>
 									<ParamChoice storage="3" name="Syncmode" default="0" value="0" storeChoices="0"/>
 									<ParamChoice storage="3" name="PlayDirection" default="1" value="1" storeChoices="0"/>
-									<ParamChoice storage="3" name="PlayMode" default="0" value="0" storeChoices="0"/>
+									<ParamChoice storage="3" name="PlayMode" default="0" value="1" storeChoices="0"/>
 									<ParamChoice storage="3" name="PlayModeAway" default="0" value="0" storeChoices="0"/>
 									<Param storage="3" name="Finished" default="0" value="0"/>
 								</Params>
@@ -2091,18 +1984,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-10-25-2-hapq-3840x2160_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -2126,7 +2007,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346653" layerIndex="3" columnIndex="10">
+		<Clip name="Clip" uniqueId="1513831346653" layerIndex="4" columnIndex="10">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-center-both-rings.png"/>
 			</PreloadData>
@@ -2188,9 +2069,8 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513834674191" layerIndex="1" columnIndex="11">
+		<Clip name="Clip" uniqueId="1513834674191" layerIndex="2" columnIndex="11">
 			<PreloadData>
-				<AudioFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-05-47_DXV3-1920x1080.mov"/>
 				<VideoFile value="S:\output\_vj\newproc\vjzual3-output-2017-06-05-47_DXV3-1920x1080.mov"/>
 			</PreloadData>
 			<Params name="Params">
@@ -2224,18 +2104,6 @@
 			<ClipView name="ClipView">
 				<FoldParams name="FoldParams"/>
 			</ClipView>
-			<AudioTrack name="AudioTrack">
-				<Params name="Params">
-					<ParamRange name="Volume" default="0" value="0">
-						<ValueRange name="minMax" min="-48" max="12"/>
-						<ValueRange name="startStop" min="-48" max="12"/>
-					</ParamRange>
-				</Params>
-				<AudioEffectChain name="AudioEffectChain"/>
-				<PrimarySource>
-					<AudioFileSource FileName="S:\output\_vj\newproc\vjzual3-output-2017-06-05-47_DXV3-1920x1080.mov"/>
-				</PrimarySource>
-			</AudioTrack>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
 					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
@@ -2259,7 +2127,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346655" layerIndex="3" columnIndex="11">
+		<Clip name="Clip" uniqueId="1513831346655" layerIndex="4" columnIndex="11">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-center-inner-ring.png"/>
 			</PreloadData>
@@ -2321,7 +2189,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346657" layerIndex="3" columnIndex="12">
+		<Clip name="Clip" uniqueId="1513831346657" layerIndex="4" columnIndex="12">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-center-outer-ring.png"/>
 			</PreloadData>
@@ -2383,7 +2251,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346760" layerIndex="3" columnIndex="15">
+		<Clip name="Clip" uniqueId="1513831346760" layerIndex="4" columnIndex="15">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-no-panels.png"/>
 			</PreloadData>
@@ -2445,7 +2313,7 @@
 				</PrimarySource>
 			</VideoTrack>
 		</Clip>
-		<Clip name="Clip" uniqueId="1513831346661" layerIndex="3" columnIndex="16">
+		<Clip name="Clip" uniqueId="1513831346661" layerIndex="4" columnIndex="16">
 			<PreloadData>
 				<VideoFile value="C:\Users\tekt\creations\new-years-2018\masks\mask-no-columns.png"/>
 			</PreloadData>
