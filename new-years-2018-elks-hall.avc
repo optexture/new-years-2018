@@ -86,7 +86,6 @@
 	<Group name="Group" uniqueId="1514079726407">
 		<Params name="Params">
 			<Param name="Name" default="Group #" value="Overlay Grp"/>
-			<Param name="Bypassed" default="0" value="1"/>
 		</Params>
 		<LayerGroupView name="LayerGroupView">
 			<FoldParams name="FoldParams"/>
@@ -293,7 +292,6 @@
 		</AudioTrack>
 		<VideoTrack name="VideoTrack">
 			<Params name="Params">
-				<ParamRange name="Opacity" default="1" value="0"/>
 				<ParamRange storage="3" name="Width" default="1920" value="1920"/>
 				<ParamRange storage="3" name="Height" default="1080" value="1080"/>
 			</Params>
@@ -492,7 +490,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="964.45903139560164163">
+						<ParamRange name="Position" default="0" value="190.98143313636481366">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -557,7 +555,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="834.55213634067627027">
+						<ParamRange name="Position" default="0" value="61.074538081453219718">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -1241,7 +1239,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="284.09252155735202905">
+					<ParamRange name="Position" default="0" value="427.01561832986106992">
 						<ValueRange name="minMax" min="0" max="1000"/>
 						<ValueRange name="startStop" min="0" max="1000"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1434,7 +1432,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="817.02273073664650838">
+					<ParamRange name="Position" default="0" value="616.53507300152921289">
 						<ValueRange name="minMax" min="0" max="1000"/>
 						<ValueRange name="startStop" min="0" max="1000"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1609,7 +1607,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1134.5775022667071426">
+					<ParamRange name="Position" default="0" value="1800.1911075301463825">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
@@ -1670,7 +1668,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="330.87232162012810477">
+					<ParamRange name="Position" default="0" value="605.23392386920795616">
 						<ValueRange name="minMax" min="0" max="1000"/>
 						<ValueRange name="startStop" min="0" max="1000"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -2031,7 +2029,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="2100.4560893001034856">
+					<ParamRange name="Position" default="0" value="1788.6061643003572499">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
@@ -2092,7 +2090,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1450.6666666681737752">
+					<ParamRange name="Position" default="0" value="17.021209366619586945">
 						<ValueRange name="minMax" min="0" max="98264.833333333328483"/>
 						<ValueRange name="startStop" min="0" max="98264.833333333328483"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -5169,7 +5167,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="95350.571591549029108">
+					<ParamRange name="Position" default="0" value="98977.10511100187432">
 						<ValueRange name="minMax" min="0" max="112633.33333333332848"/>
 						<ValueRange name="startStop" min="0" max="112633.33333333332848"/>
 						<BehaviourDouble name="BehaviourDouble">
