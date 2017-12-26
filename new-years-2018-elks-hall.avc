@@ -160,7 +160,7 @@
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.94265246391296386719"/>
+						<ParamRange name="Opacity" default="1" value="0.94687455892562866211"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -237,7 +237,7 @@
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.98285746574401855469"/>
+						<ParamRange name="Opacity" default="1" value="0.9782574772834777832"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -490,7 +490,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="190.98143313636481366">
+						<ParamRange name="Position" default="0" value="731.49684418036736133">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -555,7 +555,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="61.074538081453219718">
+						<ParamRange name="Position" default="0" value="500.75995378383652223">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -685,7 +685,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="862.35488832416615423">
+						<ParamRange name="Position" default="0" value="850.73571425687350711">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -775,8 +775,8 @@
 			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<ParamRange storage="3" name="Width" default="640" value="640"/>
+					<ParamRange storage="3" name="Height" default="480" value="480"/>
 					<Param storage="3" name="RScale" default="1" value="1"/>
 					<Param storage="3" name="GScale" default="1" value="1"/>
 					<Param storage="3" name="BScale" default="1" value="1"/>
@@ -789,7 +789,7 @@
 				</RenderPass>
 				<ChoosableMixer name="Blend"/>
 				<PrimarySource>
-					<VideoSource storage="0" name="VideoSource" width="1920" height="1080" type="SpoutVideoSource">
+					<VideoSource storage="0" name="VideoSource" width="640" height="480" type="SpoutVideoSource">
 						<SpoutInfo serverName="TDNYE_panel_mask"/>
 						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 							<RenderPass name="FormatConversion" type="FormatConversion" uniqueId="12949899826025724691" baseType="Effect" index="0"/>
@@ -865,8 +865,8 @@
 			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<ParamRange storage="3" name="Width" default="640" value="640"/>
+					<ParamRange storage="3" name="Height" default="480" value="480"/>
 					<Param storage="3" name="RScale" default="1" value="1"/>
 					<Param storage="3" name="GScale" default="1" value="1"/>
 					<Param storage="3" name="BScale" default="1" value="1"/>
@@ -879,7 +879,7 @@
 				</RenderPass>
 				<ChoosableMixer name="Blend"/>
 				<PrimarySource>
-					<VideoSource storage="0" name="VideoSource" width="1920" height="1080" type="SpoutVideoSource">
+					<VideoSource storage="0" name="VideoSource" width="640" height="480" type="SpoutVideoSource">
 						<SpoutInfo serverName="TDNYE_textured_panels"/>
 						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 							<RenderPass name="FormatConversion" type="FormatConversion" uniqueId="12949899826025724691" baseType="Effect" index="0"/>
@@ -1347,11 +1347,7 @@
 							<FFGLPlugin name="FFGLPlugin" uniqueId="MEDG" fileName="C:\Program Files\Resolume Arena 6\plugins\vfx\FFGLEdgeDetection.dll"/>
 						</RenderPass>
 						<ChoosableMixer name="Mixer">
-							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
-								<Params name="Params">
-									<ParamRange name="Opacity" default="1" value="0.48317307692307692735"/>
-								</Params>
-							</RenderPass>
+							<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 						</ChoosableMixer>
 					</RenderPass>
 				</RenderPass>
@@ -1371,7 +1367,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="4881.8521280623954226">
+					<ParamRange name="Position" default="0" value="1617.5230860623778426">
 						<BehaviourDouble name="BehaviourDouble">
 							<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="1">
 								<Params name="Params">
@@ -1632,8 +1628,8 @@
 			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<ParamRange storage="3" name="Width" default="640" value="640"/>
+					<ParamRange storage="3" name="Height" default="480" value="480"/>
 					<Param storage="3" name="RScale" default="1" value="1"/>
 					<Param storage="3" name="GScale" default="1" value="1"/>
 					<Param storage="3" name="BScale" default="1" value="1"/>
@@ -1646,7 +1642,7 @@
 				</RenderPass>
 				<ChoosableMixer name="Blend"/>
 				<PrimarySource>
-					<VideoSource storage="0" name="VideoSource" width="1920" height="1080" type="SpoutVideoSource">
+					<VideoSource storage="0" name="VideoSource" width="640" height="480" type="SpoutVideoSource">
 						<SpoutInfo serverName="TDNYE_panel_mask"/>
 						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 							<RenderPass name="FormatConversion" type="FormatConversion" uniqueId="12949899826025724691" baseType="Effect" index="0"/>
@@ -1730,7 +1726,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="16.998973952606320381">
+					<ParamRange name="Position" default="0" value="815.72927330279367197">
 						<ValueRange name="minMax" min="0" max="69369.291666666671517"/>
 						<ValueRange name="startStop" min="0" max="69369.291666666671517"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -1912,7 +1908,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="17.014187656342983246">
+					<ParamRange name="Position" default="0" value="28416.941776489304175">
 						<ValueRange name="minMax" min="0" max="45979.270833333335759"/>
 						<ValueRange name="startStop" min="0" max="45979.270833333335759"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -2054,8 +2050,8 @@
 			</ClipView>
 			<VideoTrack name="VideoTrack" manualDuration="0">
 				<Params name="Params">
-					<ParamRange storage="3" name="Width" default="1920" value="1920"/>
-					<ParamRange storage="3" name="Height" default="1080" value="1080"/>
+					<ParamRange storage="3" name="Width" default="640" value="640"/>
+					<ParamRange storage="3" name="Height" default="480" value="480"/>
 					<Param storage="3" name="RScale" default="1" value="1"/>
 					<Param storage="3" name="GScale" default="1" value="1"/>
 					<Param storage="3" name="BScale" default="1" value="1"/>
@@ -2068,7 +2064,7 @@
 				</RenderPass>
 				<ChoosableMixer name="Blend"/>
 				<PrimarySource>
-					<VideoSource storage="0" name="VideoSource" width="1920" height="1080" type="SpoutVideoSource">
+					<VideoSource storage="0" name="VideoSource" width="640" height="480" type="SpoutVideoSource">
 						<SpoutInfo serverName="TDNYE_overlay"/>
 						<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueId="RenderPassChain" baseType="RenderPassChain">
 							<RenderPass name="FormatConversion" type="FormatConversion" uniqueId="12949899826025724691" baseType="Effect" index="0"/>
