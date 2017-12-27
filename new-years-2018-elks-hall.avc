@@ -123,10 +123,18 @@
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/displace/" folded="0"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/displace/mixerparamscomponent/" folded="0"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/displace/xfactor/parambasecomponent/parambasecomponent/" folded="1"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/edgedetection/mixerparamscomponent/" folded="0"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/invertrgb/" folded="1"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/invertrgb/mixerparamscomponent/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/mirror/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/mirror/mixerparamscomponent/" folded="0"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/shiftglitch/" folded="0"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/shiftglitch/mixerparamscomponent/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/blackto/paramcolorcomponent/" folded="1"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/mixerparamscomponent/" folded="0"/>
+				<FoldState component="/groupedcomponent/renderpasschaincomponent/tint/whiteto/paramcolorcomponent/" folded="1"/>
 				<FoldState component="/groupedcomponent/renderpasschaincomponent/transform/" folded="1"/>
 			</FoldParams>
 		</LayerView>
@@ -168,11 +176,7 @@
 						</Params>
 					</RenderPass>
 					<ChoosableMixer name="Mixer">
-						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
-							<Params name="Params">
-								<ParamRange name="Opacity" default="1" value="0.96263264455613073434"/>
-							</Params>
-						</RenderPass>
+						<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer"/>
 					</ChoosableMixer>
 				</RenderPass>
 				<RenderPass storage="0" name="Mirror" type="DryWetEffect" uniqueId="A108" baseType="DryWetEffect" index="3">
@@ -248,7 +252,7 @@
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.9996102452278137207"/>
+						<ParamRange name="Opacity" default="1" value="0.94491136074066162109"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -362,7 +366,7 @@
 								</BehaviourDouble>
 							</ParamRange>
 							<ParamRange name="Twist" default="0.5" value="0.40891719745222931959"/>
-							<ParamRange name="Rotation" default="0.5" value="0.25179925432136052166">
+							<ParamRange name="Rotation" default="0.5" value="0.069799366007353827457">
 								<BehaviourDouble name="BehaviourDouble">
 									<PhaseSourceTimeline name="PhaseSourceTimeline" globalSpeedEnabled="0">
 										<Params name="Params">
@@ -449,7 +453,7 @@
 			<ChoosableMixer name="Transition">
 				<RenderPass name="Alpha" type="Alpha" uniqueId="A006" baseType="Mixer">
 					<Params name="Params">
-						<ParamRange name="Opacity" default="1" value="0.99649500846862792969"/>
+						<ParamRange name="Opacity" default="1" value="0.99142724275588989258"/>
 					</Params>
 				</RenderPass>
 			</ChoosableMixer>
@@ -709,7 +713,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="940.23353042860151163">
+						<ParamRange name="Position" default="0" value="712.23562523950226932">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -774,7 +778,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="32.50847725407332689">
+						<ParamRange name="Position" default="0" value="379.10718935513278893">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -839,7 +843,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="188.56104646909480493">
+						<ParamRange name="Position" default="0" value="617.15696743968896953">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -904,7 +908,7 @@
 				</Params>
 				<Transport name="Transport">
 					<Params name="Params">
-						<ParamRange name="Position" default="0" value="884.4258434099014039">
+						<ParamRange name="Position" default="0" value="83.564220868050554714">
 							<ValueRange name="minMax" min="0" max="1000"/>
 							<ValueRange name="startStop" min="0" max="1000"/>
 							<BehaviourDouble name="BehaviourDouble">
@@ -1448,11 +1452,7 @@
 							<Params name="Params">
 								<ParamChoice name="Blend Mode" default="67464115" value="67464114" storeChoices="0"/>
 							</Params>
-							<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer">
-								<Params name="Params">
-									<ParamRange name="Opacity" default="1" value="0.5"/>
-								</Params>
-							</RenderPass>
+							<RenderPass name="Add" type="Add" uniqueId="A005" baseType="Mixer"/>
 						</ChoosableMixer>
 					</RenderPass>
 				</RenderPass>
@@ -1914,7 +1914,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="550.54579180036614616">
+					<ParamRange name="Position" default="0" value="457.39664186642380628">
 						<ValueRange name="minMax" min="0" max="1000"/>
 						<ValueRange name="startStop" min="0" max="1000"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -2038,7 +2038,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="50278.15559710861271">
+					<ParamRange name="Position" default="0" value="45791.413782400682976">
 						<ValueRange name="minMax" min="0" max="69369.291666666671517"/>
 						<ValueRange name="startStop" min="0" max="69369.291666666671517"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -2866,7 +2866,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="1733.7276219511409181">
+					<ParamRange name="Position" default="0" value="6851.2652246800680587">
 						<ValueRange name="minMax" min="0" max="57033.333333333335759"/>
 						<ValueRange name="startStop" min="0" max="57033.333333333335759"/>
 						<BehaviourDouble name="BehaviourDouble">
@@ -3261,7 +3261,7 @@
 			</Params>
 			<Transport name="Transport">
 				<Params name="Params">
-					<ParamRange name="Position" default="0" value="198518.87084563114331">
+					<ParamRange name="Position" default="0" value="7850.6504494000546401">
 						<ValueRange name="minMax" min="0" max="385300"/>
 						<ValueRange name="startStop" min="0" max="385300"/>
 						<BehaviourDouble name="BehaviourDouble">
